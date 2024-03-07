@@ -24,7 +24,9 @@ Photo gallery
 
 4. Replaced the img_layoout to img_book because the dropdown selected for that was book and the image that was loading was layout image . 
 
-5. the async keyword is not necessary in this context. The window.onload event handler is not using any asynchronous operations that require the async keyword. 
+5. the async keyword is not necessary in this context. The window.onload event handler is not using any asynchronous operations that require the async keyword.
+
+6.Updated image URLs for 600x400 layout, ensuring uniform dimensions for book, layout, and bird options in the photo gallery.
 
 
-Thanks for giving me this opporrtunity to do something like this . As per my knowledge I have done the above corrections . Hope nothing is left , Also I wanted to ask about that favicon.ico file because that was empty and I haven't seen anything needed there in index.html file regrading favicon.ico.
+Thanks for giving me this opporrtunity to do something like this . As per my knowledge I have done the above corrections .Also I wanted to ask about that favicon.ico file because that was empty and I haven't seen anything needed there in index.html file regrading favicon.ico.
