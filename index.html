@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Photo gallery</title>
+  </head>
+  <body>
+    <div id="container">
+      <h1>Select image:</h1>
+      <select onchange="changeImage(this)">
+        <option value="book">Book</option>
+        <option value="layout">Layout</option>
+        <option value="bird">Bird</option>
+      </select>
+      <div id="poster">
+        <img src="" alt="image" id="img" />
+      </div>
+    </div>
+
+    <script type="text/javascript">
+      const img_book = "https://picsum.photos/id/24/600/400";
+      const img_layout = "https://placehold.co/600x400";
+      const img_bird = "https://picsum.photos/id/244/600/400"; // Updated image URLs with 600x400 dimensions
+
+      const quote = [
+        "Strength grows in the moments when you think you can't go on but you keep going anyway.",
+        "Embrace the struggle, for within it lies the path to your strength and resilience.",
+        "Turn obstacles into opportunities and challenges into triumphs.",
+        "In the face of challenge, find your strength; in adversity, discover your resilience.",
+        "Every challenge is a chance to rewrite your story with resilience and determination.",
+      ];
+
+      window.onload = function loadImage() {
+        console.log("load image");
+
+        let current_quote = quote[Math.floor(Math.random() * quote.length)];
+        console.log(current_quote);
+        createHeading(current_quote);
+        updateImage(img_book);
+      };
+
+      function changeImage(option) {
+        console.log("change image", option.value);
+
+        let image_url;
+
+        if (option.value == "book") {
+          image_url = img_book;
+        } else if (option.value == "layout") {
+          image_url = img_layout;
+        } else {
+          image_url = img_bird;
+        }
+
+        console.log("Update image: ", image_url);
+        updateImage(image_url);
+      }
+
+      function updateImage(url) {
+        let img = document.getElementById("img");
+        img.src = url;
+      }
+
+      function createHeading(t) {
+        let heading = document.createElement("p");
+        let text = document.createTextNode(t);
+        heading.appendChild(text);
+
+        document.body.appendChild(heading);
+      }
+    </script>
+  </body>
+</html>
