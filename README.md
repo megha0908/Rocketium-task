@@ -22,7 +22,7 @@ Photo gallery
 
 3. used quote[Math.floor(Math.random() * 4)] to access a random quote, but since the quote array has five elements, we should use quote[Math.floor(Math.random() * quote.length)] to make it dynamic and work with any number of quotes.
 
-4. Replaced the img_layoout to img_book because the dropdown selected for that was book and the image that was loading was layout image . 
+4. Replaced the img_layout to img_book because the dropdown selected for that was book and the image that was loading was layout image . 
 
 5. the async keyword is not necessary in this context. The window.onload event handler is not using any asynchronous operations that require the async keyword.
 
